@@ -47,22 +47,28 @@ Key Features
 
 Electrical Specifications
 
-Input Voltage	165 V peak (≈120 VAC RMS equivalent)
+•Input Voltage	120 VAC (165 V peak)
 
-Line Frequency	50 / 60 Hz
+•Frequency	50 / 60 Hz
 
-Output Voltage	≈385 V DC
+•Output Voltage	~385–400 V DC
 
-Switching Frequency	~100 kHz
+•Switching Frequency	~100 kHz
 
-Boost Inductor	750 µH
+•Inductor	750 µH
 
-Output Capacitors	3 × 22 µF
+•Output Capacitance	66 µF
 
-Load Resistance	2 kΩ
+•Load	2 kΩ
 
-Controller	LT1249
+•Controller	LT1249
 
-MOSFET	BSC240N12NS3
+•MOSFET	BSC240N12NS3
 
-Boost Diode	1N5817
+Simulation Results
+
+The LTspice simulation verifies the correct operation of the Active PFC boost converter using the LT1249. The converter produces a regulated DC output of approximately 385–400 V with minimal ripple. The gate drive signal operates at high frequency (~100 kHz), ensuring proper switching of the MOSFET. The switch node waveform confirms typical boost converter behavior with efficient energy transfer.
+
+The inductor current exhibits a triangular waveform with a sinusoidal envelope that closely follows the input voltage, indicating effective current shaping and near-unity power factor (≈0.98–0.99). 
+
+FFT analysis shows that low-order harmonics are well suppressed, with dominant components around the switching frequency. Overall, the system demonstrates stable regulation, high power factor, and low harmonic distortion.
